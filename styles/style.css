@@ -1,0 +1,87 @@
+html{
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 576px) {
+    .news {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #viewDiv {
+        height: 350px !important;
+        width: 600px !important;
+    }
+}
+
+#viewDiv {
+    height: 400px;
+    width: 700px;
+}
+
+.jumbotron {
+    height: 500px;
+    background-color: #34495e;
+}
+
+.jumbotron span{
+    color: #eb8686;
+    text-transform: uppercase;
+}
+
+.news {
+    position: relative;
+    z-index: 1;
+    height: 350px;
+    width: 70%;
+    margin-top: -85px;
+    /* background: white; */
+    border: 2.5px solid #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.filtercontainer {
+    overflow: hidden;
+}
+
+.filterDiv{
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#myBtnContainer{
+    border-bottom: 2.5px solid #34495e;
+}
+
+#myBtnContainer .btn{
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    color: #34495e;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.filter {
+    background-color: #34495e;
+    color: white;
+}
