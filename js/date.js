@@ -11,9 +11,9 @@ function startTime(){
     h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
-    // if (dd < 10) {
-    //     dd = '0' + dd;
-    // }
+    if (day == 0){
+        day = "Minggu"
+    }
     if (day == 1){
         day = "Senin"
     }
@@ -31,9 +31,6 @@ function startTime(){
     }
     if (day == 6){
         day = "Sabtu"
-    }
-    if (day == 7){
-        day = "Minggu"
     }
     if (mm == 0) {
         mm = "Jan"
