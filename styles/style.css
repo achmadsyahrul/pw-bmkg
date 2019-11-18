@@ -7,26 +7,33 @@ body{
     height: 100%;
     width: 100%;
 }
+
+@media (max-width: 991.98px) {
+    .news{
+        height: 450px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .news{
+        height: 510px !important;
+    }
+}
+
 @media (max-width: 576px) {
     .news {
         width: 90% !important;
     }
 }
 
-@media (max-width: 991.98px) {
-    #viewDiv {
-        height: 350px !important;
-        width: 600px !important;
+@media (max-width: 450px) {
+    .news{
+        height: 600px !important;
     }
 }
 
-#viewDiv {
-    height: 400px;
-    width: 700px;
-}
-
 .jumbotron {
-    height: 500px;
+    height: 450px;
     background-color: #34495e;
 }
 
@@ -68,7 +75,7 @@ body{
     border-bottom-right-radius: 0%;
 }
 
-.btn {
+#myBtnContainer .btn {
     border: none;
     outline: none;
     padding: 12px 16px;
@@ -77,11 +84,16 @@ body{
     cursor: pointer;
 }
 
-.btn:hover {
+#myBtnContainer .btn:hover {
     background-color: #ddd;
 }
 
-.btn.filter {
+#myBtnContainer .btn.filter {
     background-color: #34495e;
     color: white;
+}
+
+#map{
+    height: 50vh;
+    width: 100%;
 }
