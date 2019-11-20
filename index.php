@@ -2,6 +2,7 @@
 include "connect.php";
 $querytop5 = "SELECT * FROM gempa WHERE mag > 5 ORDER BY tanggal desc LIMIT 5";
 $newest = "SELECT * FROM gempa ORDER BY tanggal desc, waktu desc LIMIT 1";
+// select * from gempa where (tanggal between '2019-10-15' AND '2019-10-20') AND (mag > 5) AND dep = 10;
 ?>
 
 <!doctype html>
@@ -27,15 +28,16 @@ $newest = "SELECT * FROM gempa ORDER BY tanggal desc, waktu desc LIMIT 1";
 <body onload="startTime()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <p id="date" class="text-light my-auto"></p>
-        <button class="navbar-toggler collapsible ml-auto" type="button">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link active" href="#">Beranda</a>
                 <a class="nav-item nav-link" href="#">Terkini</a>
                 <a class="nav-item nav-link" href="#">Data Gempa</a>
-                <button type="submit" class="btn btn-outline-primary ml-3">Login</button>
+                <a class="btn btn-outline-primary ml-3" href="login.php" role="button">Login</a>
             </div>
         </div>
     </nav>
@@ -202,7 +204,7 @@ $newest = "SELECT * FROM gempa ORDER BY tanggal desc, waktu desc LIMIT 1";
     </section>
     <!-- Akhir Content -->
     <!-- Footer -->
-    <footer class="py-3" style="background-color: rgb(20, 20, 30);">
+    <footer style="background-color: rgb(20, 20, 30);">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col text-white text-center py-3 mt-2">
@@ -215,7 +217,6 @@ $newest = "SELECT * FROM gempa ORDER BY tanggal desc, waktu desc LIMIT 1";
 
     <!-- Our JavaScript -->
     <script src="js/data-filter.js"></script>
-    <script src="js/collapsible.js"></script>
     <script src="js/date.js"></script>
     <script>
         var mymap = L.map('map').setView([-0.789275, 113.9213257], 4);
