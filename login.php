@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['username'])){
+        header('location: index.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +19,7 @@
     <!-- Our CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- Font Awesome -->
-    <script src='https://kit.fontawesome.com/1692d39af4.js'></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
 </head>
 
 <body onload="startTime()" class="bg-navy">
@@ -51,7 +58,7 @@
             } else if ($_GET['pesan'] == "terdaftar") { ?>
             <div class="row my-3 text-center mx-auto">
                 <div class="col-3 mx-auto">
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
                         Akun Ada sudah terdaftar. Silahkan Login!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -71,7 +78,7 @@
                     </div>
                 </div>
             </div>
-    <?php
+        <?php
         }
     }
     ?>
