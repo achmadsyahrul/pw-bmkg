@@ -180,7 +180,7 @@ include_once "header.php";
     <script src="js/date.js"></script>
     <script>
         var mymap = L.map('map').setView([-0.789275, 113.9213257], 4);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWNobWFkc3lhaHJ1bCIsImEiOiJjazMybzF2bXIwZTkyM2Rubzc5Mnp5ZDIyIn0.M0wr_PNJaulGW_tky6sayw', {
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
             id: 'mapbox.streets',
